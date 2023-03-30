@@ -1,4 +1,9 @@
-import { Counter, FunctionalComponent, GenericComponent } from '#components';
+import {
+  Counter,
+  FunctionalComponent,
+  GenericComponent,
+  RenderFunctionComponent,
+} from '#components';
 
 export default defineComponent(() => {
   return () => (
@@ -14,6 +19,13 @@ export default defineComponent(() => {
       />
       <GenericComponent
         message="Hello generic component"
+        onClick={() => {
+          // console.log called once
+          console.log('clicked');
+        }}
+      />
+      <RenderFunctionComponent
+        message="Hello render function component"
         onClick={() => {
           // console.log called once
           console.log('clicked');
