@@ -1,4 +1,4 @@
-import { Counter, FunctionalComponent } from '#components';
+import { Counter, FunctionalComponent, GenericComponent } from '#components';
 
 export default defineComponent(() => {
   return () => (
@@ -9,6 +9,13 @@ export default defineComponent(() => {
         message="Hello functional component"
         onClick={() => {
           // console.log called twice
+          console.log('clicked');
+        }}
+      />
+      <GenericComponent
+        message="Hello generic component"
+        onClick={() => {
+          // console.log called once
           console.log('clicked');
         }}
       />
